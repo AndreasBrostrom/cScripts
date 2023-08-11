@@ -25,9 +25,28 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
     _pylon = ["rhsusf_m1a1tank_base", "default"] call EFUNC(vehicle,getPylon);
     [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
 };
-
 if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F" && !(_vehicle isKindOf "cav_dragoon_unarmed_base_F")) then {
     _pylon = ["I_APC_Wheeled_03_cannon_F", "default"] call EFUNC(vehicle,getPylon);
+    [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
+};
+
+//FixedWings
+if (_vehicle iskindOf "USAF_A10") then {
+    _pylon = ["USAF_A10", "default"] call EFUNC(vehicle,getPylon);
+    [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
+};
+if (_vehicle iskindOf "USAF_F22_EWP_AG") then {
+    _pylon = ["USAF_F22_EWP_AG", "default"] call EFUNC(vehicle,getPylon);
+    [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
+};
+if (_vehicle iskindOf "USAF_F35A") then {
+    _pylon = ["USAF_F35A", "default"] call EFUNC(vehicle,getPylon);
+    [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
+};
+
+//Helicopters
+if (_vehicle iskindOf "RHS_AH64D") then {
+    _pylon = ["RHS_AH64D", "default"] call EFUNC(vehicle,getPylon);
     [_vehicle, "default", _pylon] call EFUNC(vehicle,applyLoadout);
 };
 
