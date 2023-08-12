@@ -138,8 +138,8 @@ private _textures = [
                 [29,"\usaf_main\data\tail\fy\70_d.paa"],
 
                 [30, "\usaf_main\characters\numbers\n_4_dg.paa"],
-                [21, "\usaf_main\characters\numbers\n_1_dg.paa"],
-                [22, "\usaf_main\characters\numbers\n_7_dg.paa"]
+                [21, "\usaf_main\characters\numbers\n_2_dg.paa"],
+                [22, "\usaf_main\characters\numbers\n_1_dg.paa"]
             ]] call EFUNC(vehicle,applyTextures);
         }
     ]],
@@ -159,8 +159,8 @@ private _textures = [
                 [29,"\usaf_main\data\tail\fy\70_d.paa"],
 
                 [30, "\usaf_main\characters\numbers\n_4_dg.paa"],
-                [21, "\usaf_main\characters\numbers\n_1_dg.paa"],
-                [22, "\usaf_main\characters\numbers\n_7_dg.paa"]
+                [21, "\usaf_main\characters\numbers\n_2_dg.paa"],
+                [22, "\usaf_main\characters\numbers\n_1_dg.paa"]
             ]] call EFUNC(vehicle,applyTextures);
         }
     ]]
