@@ -131,6 +131,7 @@ private _textures = [
                 [0, "\usaf_a10\skins\a10_01_worn_co.paa"],
 
                 // Tail Number
+                [25, ""], //tail_art
                 [26, "\z\cav\addons\insignia\data\Alpha_1_D.paa"],
                 [27, "\usaf_main\characters\c_dg.paa"],
                 [28, "\usaf_main\characters\a_dg.paa"],
@@ -152,6 +153,7 @@ private _textures = [
                 [0, "\usaf_a10\skins\a10_01_worn_shark_co.paa"],
 
                 // Tail Number
+                [25, ""], //tail_art
                 [26, "\z\cav\addons\insignia\data\Alpha_1_D.paa"],
                 [27, "\usaf_main\characters\c_dg.paa"],
                 [28, "\usaf_main\characters\a_dg.paa"],
