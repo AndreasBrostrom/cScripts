@@ -72,4 +72,4 @@ if (_vehicleLoadout#0 isEqualType []) then {
 };
 
 INFO_3("VehiclePylonApply", "Vehicle %1 (%2) have been rearmed with '%3'", _vehicle, typeOf _vehicle, _loadoutName);
-_vehicle setVariable [QEGVAR(vehicle,pylon), [_loadoutName, _vehicleLoadout], true];
+_vehicle setVariable [QEGVAR(Vehicle,Pylon), [_loadoutName, _vehicleLoadout], true];
