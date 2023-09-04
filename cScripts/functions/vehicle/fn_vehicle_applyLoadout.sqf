@@ -9,6 +9,9 @@
  * 1: LoadoutName <OBJECT>
  * 2: VehicleLoadout <OBJECT>
  *
+ * Return Value:
+ * nothing
+ *
  * Example:
  * ["vic", "default", []] call cScripts_fnc_vehicle_applyLoadout;
  * ["vic", "default", [["SmokeLauncherMag",[0,0],6]]] call cScripts_fnc_vehicle_applyLoadout;
@@ -17,6 +20,8 @@
  *
  * _var = ["rhsusf_m1a1tank_base", "default"] call cScripts_fnc_vehicle_getPylon;
  * ["vic", "default", _var] call cScripts_fnc_vehicle_applyLoadout;
+ *
+ * Public: No
  */
 
 params [
