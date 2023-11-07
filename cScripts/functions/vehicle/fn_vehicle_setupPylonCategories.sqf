@@ -28,7 +28,7 @@ if (_vehicle iskindOf "rhsusf_m1a1tank_base") then {
         // TypeOf,                DisplayName,   Name,           Icon
         ["rhsusf_m1a1tank_base",  "Hard",        "hard",         ""],
         ["rhsusf_m1a1tank_base",  "Soft",        "soft",         ""],
-        ["rhsusf_m1a1tank_base",  "Default",     "default",      ""]
+        ["rhsusf_m1a1tank_base",  "Mixed",       "default",      ""]
     ];
 };
 if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F" && !(_vehicle isKindOf "cav_dragoon_unarmed_base_F")) then {
@@ -37,7 +37,7 @@ if (_vehicle iskindOf "I_APC_Wheeled_03_cannon_F" && !(_vehicle isKindOf "cav_dr
         ["I_APC_Wheeled_03_cannon_F",  "Anti-Armor",  "antiarmor",    ""],
         ["I_APC_Wheeled_03_cannon_F",  "Anti-Air",    "antiair",      ""],
         ["I_APC_Wheeled_03_cannon_F",  "Assault",     "assault",      ""],
-        ["I_APC_Wheeled_03_cannon_F",  "Default",     "default",      ""]
+        ["I_APC_Wheeled_03_cannon_F",  "Sandard",     "default",      ""]
     ];
 };
 
