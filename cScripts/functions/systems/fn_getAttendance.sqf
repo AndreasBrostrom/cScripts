@@ -17,6 +17,12 @@
 
 private _playerLog = missionNamespace getVariable [QEGVAR(log,players), []];
 
+[format ["Attendance (Entries: %1)", count _playerLog], "Attendance"] call FUNC(info);
+{
+    _x params ["_name"];
+} forEach _playerLog;
+
+
 // Rpt 
 ["=================================================== START", "Attendance"] call FUNC(info);
 [format ["Attendance (Entries: %1)", count _playerLog], "Attendance"] call FUNC(info);

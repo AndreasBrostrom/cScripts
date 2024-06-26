@@ -40,8 +40,17 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
 }] call CBA_fnc_addEventHandler;
 
 [QEGVAR(log,player), {
-    _this params ["_playerName"];
-    private _playerLog = missionNamespace getVariable [QEGVAR(log,players), []];
-    _playerLog pushBack _playerName;
+    _this params ["_player"];
+    private _playerLog = missionNamespace getVariable [QEGVAR(log,players), createHashMap];
+
+    private _data = createHashMapFromArray [
+        ["name", name player],
+        ["connection", systemTimeUTC],
+        ["disconnect", []],
+        ["loadout", typeOf player],
+    ];
+    private _map = createHashMapFromArray [[getPlayerUID _player, _data]];
+    
+    _playerLog set _map;
     missionNamespace setVariable [QEGVAR(log,players), _playerLog];
 }] call CBA_fnc_addEventHandler;
