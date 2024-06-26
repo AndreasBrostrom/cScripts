@@ -35,22 +35,21 @@ if (GVAR(isPlayer)) then {
 if (!isServer) exitWith {};
 INFO("InitEventHandlers","Creating Server EventHandlers");
 
-[QEGVAR(log,text), {
-    diag_log text _this;
-}] call CBA_fnc_addEventHandler;
+addMissionEventHandler ["PlayerConnected", {
+    params ["", "_uid", "_name"];
 
-[QEGVAR(log,player), {
-    _this params ["_player"];
     private _playerLog = missionNamespace getVariable [QEGVAR(log,players), createHashMap];
 
-    private _data = createHashMapFromArray [
-        ["name", name player],
-        ["connection", systemTimeUTC],
-        ["disconnect", []],
-        ["loadout", typeOf player],
-    ];
-    private _map = createHashMapFromArray [[getPlayerUID _player, _data]];
+    // Create map if none exist
+    // Update connection
     
-    _playerLog set _map;
     missionNamespace setVariable [QEGVAR(log,players), _playerLog];
+}];
+addMissionEventHandler ["PlayerDisconnected", {
+    params ["", "_uid", "_name"];
+}];
+
+
+[QEGVAR(log,text), {
+    diag_log text _this;
 }] call CBA_fnc_addEventHandler;
