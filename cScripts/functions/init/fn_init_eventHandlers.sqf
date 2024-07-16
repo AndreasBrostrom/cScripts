@@ -45,3 +45,24 @@ INFO("InitEventHandlers","Creating Server EventHandlers");
     _playerLog pushBack _playerName;
     missionNamespace setVariable [QEGVAR(log,players), _playerLog];
 }] call CBA_fnc_addEventHandler;
+
+
+[QEGVAR(diag,server), {
+    SHOW_INFO("DIAG","Server told to send diagnostics");
+    private _fps = (round diag_fps);
+    private _fpsMin = (round diag_fpsMin);
+    private _upTime = (round (diag_tickTime/60));
+    private _missionTime = (round (time/60));
+
+    private _performance = [_fps,_fpsMin,_upTime,_missionTime];
+    
+    private _activeScripts = diag_activeScripts;
+    private _spawn = _activeScripts#0;
+    private _execVM = _activeScripts#1;
+    private _exec = _activeScripts#2;
+    private _execFSM = _activeScripts#3;
+
+    private _scripts = [_spawn,_execVM,_exec,_execFSM];
+    
+    SETMVAR(EGVAR(diag,server_data),[_performance,_scripts]);
+}] call CBA_fnc_addEventHandler;
